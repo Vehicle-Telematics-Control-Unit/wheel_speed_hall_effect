@@ -67,7 +67,7 @@ main-build: Vehicle_speed_test0.elf secondary-outputs
 
 # Tool invocations
 Vehicle_speed_test0.elf Vehicle_speed_test0.map: $(OBJS) $(USER_OBJS) C:\Users\Mohamed\ Nabil\STM32CubeIDE\workspace_1.11.2\Vehicle_speed_test0\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Vehicle_speed_test0.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Mohamed Nabil\STM32CubeIDE\workspace_1.11.2\Vehicle_speed_test0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vehicle_speed_test0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "Vehicle_speed_test0.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Mohamed Nabil\STM32CubeIDE\workspace_1.11.2\Vehicle_speed_test0\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Vehicle_speed_test0.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
