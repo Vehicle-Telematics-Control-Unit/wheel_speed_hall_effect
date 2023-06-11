@@ -28,6 +28,10 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
+#include "socket.h"
+#include "w5500.h"
+#include "wizchip_conf.h"
+#include "w5500_interface.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
